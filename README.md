@@ -1,5 +1,5 @@
 # DeviceExtractor
-Forensic tool for iOS that dump every criticial information from a device using a trusted computer.
+Forensic tool for iOS that dump every critical information from a device using a trusted computer.
 # Instructions
 - Keep the device power on, until you can connect it to a trusted computer.
 - Then, download the source code.
