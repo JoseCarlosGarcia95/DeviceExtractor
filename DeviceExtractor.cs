@@ -27,8 +27,7 @@ namespace ForensicIOS
         private string GetFileIdFromDomainandRelativePath(string domain, string relativePath)
         {
             var dbConnection =
-                new SQLiteConnection("Data Source=" + _backupPath +
-                                     "\\33af4fdf827889bb8d10d44b1029cf5013211780\\Manifest.db;Version=3;");
+                new SQLiteConnection("Data Source=" + _backupDevicePath + "\\Manifest.db;Version=3;");
             dbConnection.Open();
 
             var sql = "select fileId from Files WHERE domain = '" + domain + "' AND relativePath = '" + relativePath +
@@ -120,7 +119,7 @@ namespace ForensicIOS
         {
             Console.WriteLine("Initializing backup i/o");
             _backupPath = Environment.CurrentDirectory + "\\backup";
-            _backupDevicePath = _backupPath + "\\33af4fdf827889bb8d10d44b1029cf5013211780\\";
+            _backupDevicePath = _backupPath + "\\youruuid\\";
 
             if (Directory.Exists(_backupPath))
             {
